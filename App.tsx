@@ -11,15 +11,15 @@ import {
 import Post from './src/components/Post/Post';
 import feed from './assets/data/feed';
 import SearchResultsPage from './src/screens/SearchResults/SearchResultsPage';
+import DestinationSearchScreen from './src/screens/DestinationSearch/DestinationSearchScreen';
+import GuestsScreen from './src/screens/Guests/GuestsScreen';
 
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const post1 = feed[0];
-
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Colors.darker : '#fff',
   };
 
   return (
@@ -30,7 +30,9 @@ function App(): React.JSX.Element {
       />
 
       {/* <HomeScreen/> */}
-      <SearchResultsPage/>
+      {/* <SearchResultsPage/> */}
+      {/* <DestinationSearchScreen/> */}
+      <GuestsScreen/>
     </SafeAreaView>
 
   );
