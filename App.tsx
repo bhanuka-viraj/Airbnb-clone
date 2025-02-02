@@ -2,14 +2,13 @@ import React from 'react';
 import {
   SafeAreaView,
   StatusBar,
-  StyleSheet,
   useColorScheme,
 } from 'react-native';
 
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
-import HomeScreen from './src/screens/Home/HomeScreen';
+import Post from './src/components/Post/Post';
 
 
 function App(): React.JSX.Element {
@@ -26,8 +25,11 @@ function App(): React.JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
 
-      <HomeScreen/>
+      {/* <HomeScreen/> */}
+      <Post />
+      <Post />
     </SafeAreaView>
+
   );
 }
 
