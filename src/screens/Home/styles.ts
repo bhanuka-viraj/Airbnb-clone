@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { Dimensions, Platform, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     image: {
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         position: 'absolute',
-        top: 10,
+        top: Platform.OS === 'ios' ? 50 : 10,
         zIndex:100
         
     },

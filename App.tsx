@@ -13,6 +13,7 @@ import feed from './assets/data/feed';
 import SearchResultsPage from './src/screens/SearchResults/SearchResultsPage';
 import DestinationSearchScreen from './src/screens/DestinationSearch/DestinationSearchScreen';
 import GuestsScreen from './src/screens/Guests/GuestsScreen';
+import Router from './src/navigation/Router';
 
 
 function App(): React.JSX.Element {
@@ -23,17 +24,16 @@ function App(): React.JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
+    <>
+          <StatusBar
+      barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+      backgroundColor={backgroundStyle.backgroundColor}
       />
+      
+      <Router/>
+    </>
 
-      {/* <HomeScreen/> */}
-      {/* <SearchResultsPage/> */}
-      {/* <DestinationSearchScreen/> */}
-      <GuestsScreen/>
-    </SafeAreaView>
+
 
   );
 }
