@@ -9,10 +9,14 @@ import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
 import Post from './src/components/Post/Post';
+import feed from './assets/data/feed';
+import SearchResultsPage from './src/screens/SearchResults/SearchResultsPage';
 
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+
+  const post1 = feed[0];
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -26,8 +30,7 @@ function App(): React.JSX.Element {
       />
 
       {/* <HomeScreen/> */}
-      <Post />
-      <Post />
+      <SearchResultsPage/>
     </SafeAreaView>
 
   );
